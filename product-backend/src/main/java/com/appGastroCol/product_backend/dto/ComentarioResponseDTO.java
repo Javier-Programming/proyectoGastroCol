@@ -1,23 +1,24 @@
 package com.appGastroCol.product_backend.dto;
 
-public class ComentarioDTO {
+// DTO para retornar comentarios con información del usuario (sin referencias circulares)
+public class ComentarioResponseDTO {
     // Atributos del comentario
     private Long id;
     private String contenido;
-    private Long usuarioId;
+    private UsuarioSimpleDTO usuario;
     private Long publicacionId;
     private String fechaCreacion;
 
-    // Constructor vacío
-    public ComentarioDTO() {
+    // Constructores
+    public ComentarioResponseDTO() {
     }
 
     // Constructor con parámetros
-    public ComentarioDTO(Long id, String contenido, Long usuarioId,
+    public ComentarioResponseDTO(Long id, String contenido, UsuarioSimpleDTO usuario,
             Long publicacionId, String fechaCreacion) {
         this.id = id;
         this.contenido = contenido;
-        this.usuarioId = usuarioId;
+        this.usuario = usuario;
         this.publicacionId = publicacionId;
         this.fechaCreacion = fechaCreacion;
     }
@@ -39,12 +40,12 @@ public class ComentarioDTO {
         this.contenido = contenido;
     }
 
-    public Long getUsuarioId() {
-        return usuarioId;
+    public UsuarioSimpleDTO getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarioId(Long usuarioId) {
-        this.usuarioId = usuarioId;
+    public void setUsuario(UsuarioSimpleDTO usuario) {
+        this.usuario = usuario;
     }
 
     public Long getPublicacionId() {

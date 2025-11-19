@@ -4,20 +4,20 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_reaccion", uniqueConstraints = @UniqueConstraint(columnNames = { "usuario_id", "publicacion_id" }))
-public class Reaccion {
-    // Atributos de la reacción
+@Table(name = "tb_seguidores", uniqueConstraints = @UniqueConstraint(columnNames = { "seguidor_id", "seguido_id" }))
+public class Seguidor {
+    // Atributos del seguidor
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "usuario_id", nullable = false)
-    private Usuario usuario;
+    @JoinColumn(name = "seguidor_id", nullable = false)
+    private Usuario seguidor;
 
     @ManyToOne
-    @JoinColumn(name = "publicacion_id", nullable = false)
-    private Publicacion publicacion;
+    @JoinColumn(name = "seguido_id", nullable = false)
+    private Usuario seguido;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fechaCreacion;
@@ -28,15 +28,15 @@ public class Reaccion {
     }
 
     // Constructor vacío
-    public Reaccion() {
+    public Seguidor() {
     }
 
     // Constructor con parámetros
-    public Reaccion(Long id, Usuario usuario, Publicacion publicacion,
+    public Seguidor(Long id, Usuario seguidor, Usuario seguido,
             LocalDateTime fechaCreacion) {
         this.id = id;
-        this.usuario = usuario;
-        this.publicacion = publicacion;
+        this.seguidor = seguidor;
+        this.seguido = seguido;
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -49,20 +49,20 @@ public class Reaccion {
         this.id = id;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Usuario getSeguidor() {
+        return seguidor;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setSeguidor(Usuario seguidor) {
+        this.seguidor = seguidor;
     }
 
-    public Publicacion getPublicacion() {
-        return publicacion;
+    public Usuario getSeguido() {
+        return seguido;
     }
 
-    public void setPublicacion(Publicacion publicacion) {
-        this.publicacion = publicacion;
+    public void setSeguido(Usuario seguido) {
+        this.seguido = seguido;
     }
 
     public LocalDateTime getFechaCreacion() {
