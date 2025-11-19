@@ -156,13 +156,13 @@
 
       feature/core (Javier Díaz — Líder)
 
-      feature/auth (Miembro 1)
+      feature/auth (Javier Díaz — Líder)
 
       feature/restaurants-posts (Miembro 2)
 
       feature/social (Miembro 3)
 
-      feature/orders (Miembro 4)
+      feature/orders (Jorge Vargas)
 
 🌿 Cada rama corresponde a una funcionalidad completa del backend.
 
@@ -386,7 +386,7 @@ service/impl/
 
       Obtener seguidores y seguidos
 
-⭐ 4. feature/orders — Miembro 4
+⭐ 4. feature/orders — Jorge Vargas
 
       Responsable: sistema de pedidos
 
