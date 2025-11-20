@@ -158,9 +158,9 @@
 
       feature/auth (Javier Díaz — Líder)
 
-      feature/restaurants-posts (Miembro 2)
+      feature/restaurants-posts (Cristian Herazo)
 
-      feature/social (Miembro 3)
+      feature/social (Andrés Torres)
 
       feature/orders (Jorge Vargas)
 
@@ -204,7 +204,7 @@
 
       A continuación se detalla la ruta de trabajo archivo por archivo por cada carpeta.
 
-⭐ 1. feature/auth — Miembro 1
+⭐ 1. feature/auth — Javier Díaz
 
       Responsable: Autenticación y seguridad completa
 
@@ -272,7 +272,7 @@
 
       Protección de rutas privadas
 
-⭐ 2. feature/restaurants-posts — Miembro 2
+⭐ 2. feature/restaurants-posts — Cristian Herazo
 
       Responsable: Restaurantes + publicaciones
 
@@ -324,7 +324,7 @@ service/impl/
 
       Conectar publicaciones con comentarios y reacciones
 
-⭐ 3. feature/social — Miembro 3
+⭐ 3. feature/social — Andrés Torres
 
       Responsable: Comentarios (ya listos), reacciones, seguidores
 
