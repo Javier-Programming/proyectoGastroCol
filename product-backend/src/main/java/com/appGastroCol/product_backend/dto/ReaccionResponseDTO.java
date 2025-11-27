@@ -1,20 +1,21 @@
 package com.appGastroCol.product_backend.dto;
 
-public class ReaccionDTO {
+// DTO para retornar reacciones con información del usuario (sin referencias circulares)
+public class ReaccionResponseDTO {
     // Atributos de la reacción
     private Long id;
-    private Long usuarioId;
+    private UsuarioSimpleDTO usuario;
     private Long publicacionId;
     private String fechaCreacion;
 
-    // Constructor vacío
-    public ReaccionDTO() {
+    // Constructores
+    public ReaccionResponseDTO() {
     }
 
     // Constructor con parámetros
-    public ReaccionDTO(Long id, Long usuarioId, Long publicacionId, String fechaCreacion) {
+    public ReaccionResponseDTO(Long id, UsuarioSimpleDTO usuario, Long publicacionId, String fechaCreacion) {
         this.id = id;
-        this.usuarioId = usuarioId;
+        this.usuario = usuario;
         this.publicacionId = publicacionId;
         this.fechaCreacion = fechaCreacion;
     }
@@ -28,12 +29,12 @@ public class ReaccionDTO {
         this.id = id;
     }
 
-    public Long getUsuarioId() {
-        return usuarioId;
+    public UsuarioSimpleDTO getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarioId(Long usuarioId) {
-        this.usuarioId = usuarioId;
+    public void setUsuario(UsuarioSimpleDTO usuario) {
+        this.usuario = usuario;
     }
 
     public Long getPublicacionId() {
