@@ -16,11 +16,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 public class SecurityConfig {
 
-    private final UserDetailsServiceImpl userDetailsService;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     public SecurityConfig(UserDetailsServiceImpl uds, JwtAuthenticationFilter jwtFilter) {
-        this.userDetailsService = uds;
         this.jwtAuthenticationFilter = jwtFilter;
     }
 
@@ -42,6 +40,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/comentarios/**").permitAll()
+                        .requestMatchers("/api/reacciones/**").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form -> form.disable())
                 .httpBasic(basic -> basic.disable())
