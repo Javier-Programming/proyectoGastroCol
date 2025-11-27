@@ -41,6 +41,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/comentarios/**").permitAll()
                         .requestMatchers("/api/reacciones/**").permitAll()
+                        .requestMatchers("/api/seguidores/**").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form -> form.disable())
                 .httpBasic(basic -> basic.disable())
