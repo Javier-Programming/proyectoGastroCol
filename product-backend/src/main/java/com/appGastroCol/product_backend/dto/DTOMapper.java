@@ -87,4 +87,28 @@ public class DTOMapper {
                 reaccion.getPublicacion().getId(),
                 reaccion.getFechaCreacion().format(formatter));
     }
+
+    // Convertir Seguidor a SeguidorResponseDTO
+    public static SeguidorResponseDTO toSeguidorResponseDTO(com.appGastroCol.product_backend.entity.Seguidor seguidor) {
+        if (seguidor == null)
+            return null;
+
+        return new SeguidorResponseDTO(
+                seguidor.getId(),
+                toUsuarioSimpleDTO(seguidor.getSeguidor()),
+                toUsuarioSimpleDTO(seguidor.getSeguido()),
+                seguidor.getFechaCreacion().format(formatter));
+    }
+
+    // Convertir Seguidor a SeguidorDTO
+    public static SeguidorDTO toSeguidorDTO(com.appGastroCol.product_backend.entity.Seguidor seguidor) {
+        if (seguidor == null)
+            return null;
+
+        return new SeguidorDTO(
+                seguidor.getId(),
+                seguidor.getSeguidor().getId(),
+                seguidor.getSeguido().getId(),
+                seguidor.getFechaCreacion().format(formatter));
+    }
 }
