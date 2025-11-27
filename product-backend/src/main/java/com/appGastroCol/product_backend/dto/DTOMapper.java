@@ -62,4 +62,19 @@ public class DTOMapper {
                 comentario.getPublicacion().getId(),
                 comentario.getFechaCreacion().format(formatter));
     }
+
+    // Convertir Publicacion a PublicacionDTO
+    public static PublicacionDTO toPublicacionDTO(com.appGastroCol.product_backend.entity.Publicacion publicacion) {
+        if (publicacion == null)
+            return null;
+
+        return new PublicacionDTO(
+                publicacion.getId(),
+                publicacion.getTitulo(),
+                publicacion.getDescripcion(),
+                publicacion.getPrecioPlato(),
+                publicacion.getImagen(),
+                publicacion.getUsuario().getId(),
+                publicacion.getFechaCreacion().format(formatter));
+    }
 }
