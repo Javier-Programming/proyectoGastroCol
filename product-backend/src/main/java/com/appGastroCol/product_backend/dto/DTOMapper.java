@@ -63,18 +63,52 @@ public class DTOMapper {
                 comentario.getFechaCreacion().format(formatter));
     }
 
-    // Convertir Publicacion a PublicacionDTO
-    public static PublicacionDTO toPublicacionDTO(com.appGastroCol.product_backend.entity.Publicacion publicacion) {
-        if (publicacion == null)
+    // Convertir Reaccion a ReaccionResponseDTO
+    public static ReaccionResponseDTO toReaccionResponseDTO(
+            com.appGastroCol.product_backend.entity.Reaccion reaccion) {
+        if (reaccion == null)
             return null;
 
-        return new PublicacionDTO(
-                publicacion.getId(),
-                publicacion.getTitulo(),
-                publicacion.getDescripcion(),
-                publicacion.getPrecioPlato(),
-                publicacion.getImagen(),
-                publicacion.getUsuario().getId(),
-                publicacion.getFechaCreacion().format(formatter));
+        return new ReaccionResponseDTO(
+                reaccion.getId(),
+                toUsuarioSimpleDTO(reaccion.getUsuario()),
+                reaccion.getPublicacion().getId(),
+                reaccion.getFechaCreacion().format(formatter));
+    }
+
+    // Convertir Reaccion a ReaccionDTO
+    public static ReaccionDTO toReaccionDTO(com.appGastroCol.product_backend.entity.Reaccion reaccion) {
+        if (reaccion == null)
+            return null;
+
+        return new ReaccionDTO(
+                reaccion.getId(),
+                reaccion.getUsuario().getId(),
+                reaccion.getPublicacion().getId(),
+                reaccion.getFechaCreacion().format(formatter));
+    }
+
+    // Convertir Seguidor a SeguidorResponseDTO
+    public static SeguidorResponseDTO toSeguidorResponseDTO(com.appGastroCol.product_backend.entity.Seguidor seguidor) {
+        if (seguidor == null)
+            return null;
+
+        return new SeguidorResponseDTO(
+                seguidor.getId(),
+                toUsuarioSimpleDTO(seguidor.getSeguidor()),
+                toUsuarioSimpleDTO(seguidor.getSeguido()),
+                seguidor.getFechaCreacion().format(formatter));
+    }
+
+    // Convertir Seguidor a SeguidorDTO
+    public static SeguidorDTO toSeguidorDTO(com.appGastroCol.product_backend.entity.Seguidor seguidor) {
+        if (seguidor == null)
+            return null;
+
+        return new SeguidorDTO(
+                seguidor.getId(),
+                seguidor.getSeguidor().getId(),
+                seguidor.getSeguido().getId(),
+                seguidor.getFechaCreacion().format(formatter));
     }
 }
