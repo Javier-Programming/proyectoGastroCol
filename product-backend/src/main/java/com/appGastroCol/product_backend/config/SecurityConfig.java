@@ -41,7 +41,13 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/usuarios/**").permitAll()
+                        .requestMatchers("/api/roles/**").permitAll()
+                        .requestMatchers("/api/publicaciones/**").permitAll()
                         .requestMatchers("/api/comentarios/**").permitAll()
+                        .requestMatchers("/api/reacciones/**").permitAll()
+                        .requestMatchers("/api/seguidos/**").permitAll()
+                        .requestMatchers("/api/ordenes/**").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form -> form.disable())
                 .httpBasic(basic -> basic.disable())

@@ -1,0 +1,54 @@
+<section class="h-100 gradient-form">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card shadow rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+                                <div class="text-center">
+                                    <img src="logo/logo.png" style="width: 185px;" alt="Logo">
+                                    <h4 class="mb-5">GastroCol - Social</h4>
+                                </div>
+                                <form (ngSubmit)="login()">
+                                    <div class="form-outline mb-4">
+                                        <input type="email" name="email" [(ngModel)]="email" class="form-control"
+                                            placeholder="Correo electrónico" />
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="password" name="password" [(ngModel)]="password"
+                                            placeholder="Contraseña" class="form-control" />
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <button type="submit"
+                                            class="btn btn-outline-primary btn-block fa-lg mb-3 btn-sm">
+                                            Iniciar sesión
+                                        </button>
+                                        <a class="text-muted" href="#">¿Olvidaste tu contraseña?</a>
+                                    </div>
+                                    <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+                                </form>
+                                <div class="d-flex align-items-center justify-content-center pb-4">
+                                    <p class="mb-0 me-2">¿Aún no tienes una cuenta?</p>
+                                    <button type="button" class="btn btn-outline-success btn-sm" routerLink="/register">
+                                        Crear una
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">Bienvenido a GastroCol - Social</h4>
+                                <p class="small mb-0">
+                                    Plataforma social para amantes de la gastronomía. Comparte recetas, descubre
+                                    restaurantes y conecta con otros entusiastas culinarios. ¡Únete a nuestra comunidad
+                                    y celebra la pasión por la buena comida!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

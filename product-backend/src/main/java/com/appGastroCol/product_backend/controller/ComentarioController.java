@@ -7,6 +7,8 @@ import com.appGastroCol.product_backend.dto.ComentarioDTO;
 import com.appGastroCol.product_backend.dto.ComentarioResponseDTO;
 import com.appGastroCol.product_backend.service.ComentarioService;
 
+// import jakarta.persistence.PostUpdate;
+
 @RestController
 @RequestMapping("/api/comentarios")
 public class ComentarioController {
@@ -20,13 +22,23 @@ public class ComentarioController {
     }
 
     // Crear comentario - Recibe ComentarioDTO, retorna ComentarioResponseDTO
-    @PostMapping
+    @PostMapping("/post/{publicacionId}")
     public ResponseEntity<ComentarioResponseDTO> crear(@RequestBody ComentarioDTO comentarioDTO) {
         ComentarioResponseDTO comentarioCreado = comentarioService.crearComentario(comentarioDTO);
         return ResponseEntity.ok(comentarioCreado);
     }
 
-    // Comentarios de un post - Retorna lista de ComentarioResponseDTO
+    // Actualizar comentario
+    @PutMapping("/post/actualizar/{id}")
+    public ResponseEntity<ComentarioResponseDTO> actualizar(
+            @PathVariable Long id,
+            @RequestBody ComentarioDTO comentarioDTO) {
+        comentarioDTO.setId(id);
+        ComentarioResponseDTO comentarioActualizado = comentarioService.actualizarComentario(comentarioDTO);
+        return ResponseEntity.ok(comentarioActualizado);
+    }
+
+    // Obtener comentarios de un post - Retorna lista de ComentarioResponseDTO
     @GetMapping("/post/{publicacionId}")
     public ResponseEntity<List<ComentarioResponseDTO>> obtenerPorPublicacion(@PathVariable Long publicacionId) {
         List<ComentarioResponseDTO> comentarios = comentarioService.obtenerComentariosPorPublicacion(publicacionId);

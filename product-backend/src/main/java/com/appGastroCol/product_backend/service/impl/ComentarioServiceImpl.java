@@ -36,7 +36,7 @@ public class ComentarioServiceImpl implements ComentarioService {
             throw new IllegalArgumentException("El comentario no puede ser nulo");
         }
 
-        // *** Esta es la parte que elimina la advertencia ***
+        // Validar campos obligatorios
         Long usuarioId = comentarioDTO.getUsuarioId();
         if (usuarioId == null) {
             throw new IllegalArgumentException("El ID del usuario no puede ser nulo");
@@ -63,6 +63,30 @@ public class ComentarioServiceImpl implements ComentarioService {
 
         Comentario comentarioGuardado = comentarioRepository.save(comentario);
         return DTOMapper.toComentarioResponseDTO(comentarioGuardado);
+    }
+
+    @Override
+    public ComentarioResponseDTO actualizarComentario(ComentarioDTO comentarioDTO) {
+        if (comentarioDTO == null) {
+            throw new IllegalArgumentException("El ID del usuario no puede ser nulo");
+        }
+
+        // Validar campos obligatorios
+        Long usuarioId = comentarioDTO.getUsuarioId();
+        if (usuarioId == null) {
+            throw new IllegalArgumentException("El ID del usuario no puede ser nulo");
+        }
+
+        // Obtener comentario existente
+        Comentario comentario = comentarioRepository.findById(comentarioDTO.getId())
+                .orElseThrow(() -> new RuntimeException(
+                        "Comentario no encontrado con ID: " + comentarioDTO.getId()));
+
+        // Actualizar contenido
+        comentario.setContenido(comentarioDTO.getContenido());
+
+        Comentario comentarioActualizado = comentarioRepository.save(comentario);
+        return DTOMapper.toComentarioResponseDTO(comentarioActualizado);
     }
 
     @Override

@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg sticky-top p-0">
+    <div class="container d-flex align-items-center justify-content-between">
+        <!-- IZQUIERDA: Logo + buscador -->
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand" routerLink="/">
+                <img src="logo/favicon.ico" class="icono" width="32" alt="Ícono">
+            </a>
+
+            <form class="d-flex" role="search">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
+                <button class="btn btn-outline-secondary btn-buscar" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- DERECHA: Items -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-lg-0 gap-3">
+                <!-- Inicio -->
+                <li class="nav-item py-1">
+                    <a class="nav-link" aria-current="page" routerLink="home" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <!-- Perfil -->
+                <li class="nav-item py-1">
+                    <a class="nav-link" routerLink="profile" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-item py-1">
+                    <a class="nav-link" routerLink="chat" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <i class="fa-solid fa-message"></i>
+                    </a>
+                </li>
+                <!-- Notificaciones -->
+                <li class="nav-item py-1">
+                    <a class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>
+                </li>
+                <!-- Usuario -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="default_profile_picture.png" width="32" style="border-radius:50%;" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Perfil</a></li>
+                        <li><a class="dropdown-item">Tema: Oscuro/Claro</a></li>
+                        <li><a class="dropdown-item" href="#">Panel administrativo</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li *ngIf="isLogged"><a class="dropdown-item" (click)="logout()">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

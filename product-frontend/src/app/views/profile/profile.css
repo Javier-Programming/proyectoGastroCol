@@ -1,0 +1,177 @@
+:root {
+    --blue: #5e72e4;
+    --indigo: #5603ad;
+    --purple: #8965e0;
+    --pink: #f3a4b5;
+    --red: #f5365c;
+    --orange: #fb6340;
+    --yellow: #ffd600;
+    --green: #2dce89;
+    --teal: #11cdef;
+    --cyan: #2bffc6;
+    --white: #fff;
+    --gray: #8898aa;
+    --gray-dark: #32325d;
+    --light: #ced4da;
+    --lighter: #e9ecef;
+    --primary: #5e72e4;
+    --secondary: #f7fafc;
+    --success: #2dce89;
+    --info: #11cdef;
+    --warning: #fb6340;
+    --danger: #f5365c;
+    --light: #adb5bd;
+    --dark: #212529;
+    --default: #172b4d;
+    --white: #fff;
+    --neutral: #fff;
+    --darker: black;
+    --font-family-sans-serif: Open Sans, sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* border: 1px solid rgba(0, 0, 0, .05); */
+    border-radius: .375rem;
+    background-clip: border-box;
+}
+
+.mt-7 {
+    margin-top: 6rem !important;
+}
+
+@media (min-width: 768px) {
+    .mt-md-5 {
+        margin-top: 3rem !important;
+    }
+
+    .pt-md-4 {
+        padding-top: 1.5rem !important;
+    }
+
+    .pb-md-4 {
+        padding-bottom: 1.5rem !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mb-xl-0 {
+        margin-bottom: 0 !important;
+    }
+}
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.font-weight-300 {
+    font-weight: 300 !important;
+}
+
+.card-profile-image {
+    position: relative;
+}
+
+.card-profile-image img {
+    position: absolute;
+    left: 50%;
+    max-width: 180px;
+    transition: all .15s ease;
+    transform: translate(-50%, -30%);
+    border-radius: .375rem;
+}
+
+.card-profile-image img:hover {
+    transform: translate(-50%, -33%);
+}
+
+.card-profile-stats {
+    padding: 1rem 0;
+}
+
+.card-profile-stats>div {
+    margin-right: 1rem;
+    padding: .875rem;
+    text-align: center;
+}
+
+.card-profile-stats>div:last-child {
+    margin-right: 0;
+}
+
+.card-profile-stats>div .heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+}
+
+.card-profile-stats>div .description {
+    font-size: .875rem;
+    color: #adb5bd;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.description {
+    font-size: .875rem;
+}
+
+
+/* img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+} */
+
+.food_description {
+    text-align: justify;
+}
+
+.gradient {
+    background: linear-gradient(to right, #d6afd6, #9494d1, #6677cc, #5c85d6);
+}
+
+
+
+.card_pasarela {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+    font-size: 13px;
+}

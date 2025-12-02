@@ -4,8 +4,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import com.appGastroCol.product_backend.entity.Reaccion;
 
+import java.util.List;
+
 @Repository
 public interface ReaccionRepository extends JpaRepository<Reaccion, Long> {
-    // Métodos personalizados.
-    // Por ejemplo: List<Reaccion> findByTipo(String tipo);
+    // Buscar reacción por usuario y publicación
+    java.util.Optional<Reaccion> findByUsuarioIdAndPublicacionId(Long usuarioId, Long publicacionId);
+
+    // Contar las reacciones de una publicación
+    long countByPublicacionId(Long publicacionId);
+
+    // Obtener todas las reacciones de una publicación
+    List<Reaccion> findAllByPublicacionId(Long publicacionId);
 }

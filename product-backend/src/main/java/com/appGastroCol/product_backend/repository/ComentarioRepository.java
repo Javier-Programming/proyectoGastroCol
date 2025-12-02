@@ -8,5 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 @Repository
 public interface ComentarioRepository extends JpaRepository<Comentario, Long> {
     // Métodos personalizados.
-    List<Comentario> findByPublicacionId(Long publicacionId); // Obtener todos los comentarios de un post por ID de post
+    // Obtener todos los comentarios de un post por ID de post
+    List<Comentario> findByPublicacionId(Long publicacionId); 
 }

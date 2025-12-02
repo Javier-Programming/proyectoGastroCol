@@ -1,0 +1,14 @@
+body {
+    /* background-color: #EEEEEE !important; */
+    /* background-color: #ffd79183; */
+    background-color: #fff6e7 !important;
+}
+
+.card {
+    /* background: #fefbf7; */
+    background: #fefbf7;
+}
+
+.sizeElements {
+    outline: 2px dashed red;
+}

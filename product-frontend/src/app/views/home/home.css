@@ -1,0 +1,46 @@
+img {
+    object-fit: cover;
+    aspect-ratio: 10/9;
+}
+
+.food_description {
+    text-align: justify;
+}
+
+/* PASARELA DE PAGO */
+.card_pasarela {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+}
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+    font-size: 13px;
+}
+/* PASARELA DE PAGO */

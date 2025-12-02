@@ -16,10 +16,7 @@ public class CorsConfig {
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(
-                                "http://localhost:5173", // Frontend local (Vite)
-                                "http://localhost:4200", // Angular
-                                "http://localhost:3000", // React/Next.js
-                                "https://gastro_col_social.com" // Producción
+                                "http://localhost:4200" // Angular
                 )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")

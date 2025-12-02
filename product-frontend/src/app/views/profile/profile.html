@@ -1,0 +1,298 @@
+<main class="container">
+    <!-- CARD PROFILE -->
+    <div class="main-content">
+        <div class="container mt-7">
+            <!-- Table -->
+            <div class="row">
+                <div class="col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0">
+                    <div class="card card-profile shadow gradient text-light">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 order-lg-2">
+                                <div class="card-profile-image">
+                                    <img src="profile_photo.jpg" class="rounded-circle">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header text-center border-0 px-1">
+                            <div class="d-flex justify-content-between">
+                                <button href="#" class="btn btn-sm btn-outline-light">Seguir</button>
+                                <button href="#" class="btn btn-sm btn-outline-light">Chat</button>
+                            </div>
+                        </div>
+                        <div class="card-body mt-3 mt-sm-0">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                                        <div>
+                                            <span class="heading">22</span>
+                                            <span class="description">Seguidores</span>
+                                        </div>
+                                        <div>
+                                            <span class="heading">10</span>
+                                            <span class="description">Publicaciones</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h3>El Establo Campestre</h3>
+                                <div class="h5 font-weight-300">
+                                    Sincelejo, Colombia
+                                </div>
+                                <div class="h5 mt-4">
+                                    ¿Quiénes somos?
+                                </div>
+                                <div>
+                                    Somos un restaurante que ofrece...
+                                </div>
+                                <hr class="my-4">
+                                <p>
+                                    Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes,
+                                    performs
+                                    and records all of his own music.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CARD PROFILE -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <div class="d-flex gap-2">
+                <img src="profile_photo.jpg" width="32" class="rounded-5" alt="Foto de perfil">
+                <h5>Crear nueva publicación</h5>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="card-body text-center">
+            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Crear publicación
+            </button>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="profile_photo.jpg" width="37" height="37" style="border-radius: 50% !important;"
+                            alt="Foto de perfil">
+                        <h6>Restaurante El Establo Campestre</h6>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formFileSm" class="form-label">Selecciona la imagen del plato</label>
+                        <input class="form-control form-control-sm" id="formFileSm" type="file" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Título</label>
+                        <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1"
+                            placeholder="Título" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Describe tu plato</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Valor</label>
+                        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1"
+                            placeholder="Ejemplo: $15000" required>
+                    </div>
+                </div>
+                <div class="modal-footer d- justify-content-between">
+                    <button type="button" class="btn btn-outline-secondary btn-sm"
+                        data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <!--  PUBLICACIONES -->
+        <div class="card-group py-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="profile_photo.jpg" width="37" height="37" style="border-radius: 50% !important;"
+                                alt="Foto de perfil">
+                            <h6>El Establo Campestre</h6>
+                        </div>
+
+                        <div class="dropdown">
+                            <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Edición</a></li>
+                                <li><a class="dropdown-item" href="#">Reportar</a></li>
+                                <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="bg-food">
+                        <div class="row gy-5 flex-lg-row">
+                            <div class="col-lg-7 text-center">
+                                <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg"
+                                    class="w-100 rounded-4" alt="">
+                                <!-- Button trigger modal -->
+                                <div class="d-grid gap-2 mt-3">
+                                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                                        data-bs-target="#moteQueso">
+                                        Comprar
+                                    </button>
+                                </div>
+                                <!-- MODAL -->
+                                <div class="modal fade" id="moteQueso" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                                                    Mote de Queso
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="card_pasarela">
+                                                    <label class="label" for="name">Nombre en la tarjeta</label>
+                                                    <input class="input" id="name" type="text"
+                                                        placeholder="Juan Pérez" />
+
+                                                    <label class="label" for="number">Número de tarjeta</label>
+                                                    <input class="input" id="number" type="text"
+                                                        placeholder="4242 4242 4242 4242" />
+
+                                                    <div class="row">
+                                                        <div style="flex:1">
+                                                            <label class="label" for="exp">Exp.</label>
+                                                            <input class="input" id="exp" type="text"
+                                                                placeholder="12/28" />
+                                                        </div>
+                                                        <div style="flex:1">
+                                                            <label class="label" for="cvv">CVV</label>
+                                                            <input class="input" id="cvv" type="password"
+                                                                placeholder="123" />
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-outline-primary mt-4" onclick="fakePay()">
+                                                        Pagar $15.000 COP
+                                                    </button>
+                                                    <p class="footer">
+                                                        Modo demostración — No se procesa ningún pago real.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Cerrar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END MODAL -->
+                            </div>
+
+                            <div class="col-lg-5">
+                                <div class="card text-center h-100">
+                                    <div class="card-header">
+                                        <ul class="nav nav-tabs card-header-tabs justify-content-evenly">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#description" type="button" role="tab"
+                                                    aria-controls="description" aria-selected="true">Descripción</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="comments-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#comments" type="button" role="tab"
+                                                    aria-controls="comments" aria-selected="false">Comentarios</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="reactions-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#reactions" type="button" role="tab"
+                                                    aria-controls="reactions" aria-selected="false">Reacciones</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--  -->
+                                    <div class="mb-5 tab-content">
+                                        <div class="tab-pane active" id="description" role="tabpanel"
+                                            aria-labelledby="description-tab">
+                                            <div class="card-body">
+                                                <h3 class="fst-italic text-start">Mote de Queso</h3>
+                                                <p class="food_description">
+                                                    El Mote de Queso es uno de los platos más representativos de
+                                                    la región Caribe colombiana. Preparado a base de ñame y queso
+                                                    costeño, este caldo espeso y cremoso es un símbolo de la
+                                                    cocina tradicional sucreña, apreciado por su sabor auténtico y
+                                                    su valor cultural en celebraciones y reuniones familiares.
+                                                </p>
+
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <span class="text-start fw-bold">Valor:</span>
+                                                    <span>$15.000 COP</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="comments" role="tabpanel"
+                                            aria-labelledby="comments-tab">
+                                            <div class="card-body">
+                                                <ul class="list-group">
+                                                    <li class="d-flex list-group-item justify-content-start gap-2">
+                                                        <img src="https://mockmind-api.uifaces.co/content/human/80.jpg"
+                                                            width="37" height="37"
+                                                            style="border-radius: 50% !important;" alt="Foto de perfil">
+                                                        <div class="text-start">
+                                                            <span class="fw-bold">Javier Díaz</span>
+                                                            <span class="text-muted">
+                                                                Se ve delicioso ese plato.
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="reactions" role="tabpanel"
+                                            aria-labelledby="reactions-tab">
+                                            <div class="card-body">
+                                                <ul class="list-group">
+                                                    <li class="d-flex list-group-item justify-content-start gap-2">
+                                                        <img src="https://mockmind-api.uifaces.co/content/human/80.jpg"
+                                                            width="37" height="37"
+                                                            style="border-radius: 50% !important;" alt="Foto de perfil">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <span class="fw-bold">Carlos Vázquez</span>
+                                                            <span class="text-muted">
+                                                                ❤️
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Publicado hace 3 minutos</small>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>

@@ -7,6 +7,8 @@ import com.appGastroCol.product_backend.dto.ComentarioResponseDTO;
 public interface ComentarioService {
     ComentarioResponseDTO crearComentario(ComentarioDTO comentarioDTO);
 
+    ComentarioResponseDTO actualizarComentario(ComentarioDTO comentarioDTO);
+
     List<ComentarioResponseDTO> obtenerComentariosPorPublicacion(Long publicacionId);
 
     void eliminarComentario(Long id);
