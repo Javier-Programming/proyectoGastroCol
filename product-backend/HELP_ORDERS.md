@@ -98,3 +98,27 @@ Siguientes pasos recomendados
 - Implementar mapeo del `total` en `DTOMapper.toOrdenDTO` (leer `publicacion.getPrecioPlato()` si existe).
 - Añadir tests: flujo crear orden -> actualizar estado -> obtener historial (usar H2).
 - Añadir validaciones más estrictas (por ejemplo, reglas de negocio al permitir cambios de estado).
+
+Cómo ejecutar tests localmente (Windows / PowerShell)
+--------------------------------------------------
+- Asegúrate de estar en la rama `feature/orders` y en el directorio `product-backend`.
+- Comandos (PowerShell):
+
+```powershell
+cd C:\Users\Jormenok\Desktop\proyectoGastroCol\proyectoGastroCol\product-backend
+# Ejecuta la suite completa de tests (usa el profile `test` que carga H2 y `schema.sql`)
+.\mvnw.cmd test -DskipTests=false
+```
+
+- Comandos (Bash / Linux / WSL):
+
+```bash
+cd /c/Users/Jormenok/Desktop/proyectoGastroCol/proyectoGastroCol/product-backend
+./mvnw test -DskipTests=false
+```
+
+Notas importantes sobre el entorno de tests
+------------------------------------------
+- El profile de pruebas (`test`) está configurado para usar H2 en memoria. El fichero `src/test/resources/application-test.properties` deshabilita `spring.jpa.hibernate.ddl-auto` y activa la inicialización SQL desde `src/test/resources/schema.sql`.
+- Si añades nuevas entidades que referencian tablas existentes, actualiza `src/test/resources/schema.sql` para incluir las tablas necesarias y mantener el orden correcto de creación/constraints. Esto evita errores de "table not found" en H2.
+- Asegúrate de no ejecutar los tests con la configuración de la base de datos de producción local (MySQL) para evitar que Hibernate intente alterar esquemas reales.
